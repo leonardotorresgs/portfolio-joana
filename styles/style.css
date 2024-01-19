@@ -46,10 +46,11 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 5% 15%;
+    gap: 82px;
 }
 
 .apresentacao__conteudo {
-    width: 615px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -83,13 +84,13 @@ strong {
     font-size: 1.5rem;
 }
 
-.apresentacao__links__link {
+.apresentacao__links__navegacao {
     display: flex;
     justify-content: center;
     gap: 16px;
     color: var(--cor-secundaria);
     border: 2px solid var(--cor-terciaria);
-    width: 378px;
+    width: 50%;
     text-align: center;
     text-decoration: none;
     font-size: 1.5rem;
@@ -99,11 +100,15 @@ strong {
     border-radius: 8px;
 }
 
-.apresentacao__links__link:hover {
+.apresentacao__links__navegacao:hover {
     background-color: #272727;
 }
 
-.foto-joana:hover {
+.apresentacao__imagem {
+    width: 50%;
+}
+
+.apresentacao__imagem:hover {
     scale: 1.01;
     transition: 1s;
     opacity: 0.9;
@@ -117,4 +122,24 @@ strong {
     font-size: 1.5rem;
     font-family: var(--fonte-secundaria);
     font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
 }
